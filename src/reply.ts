@@ -85,7 +85,7 @@ export class MentionReplier {
     try {
       const completion = await this.openai.chat.completions.create({
         model: config.openai.model,
-        temperature: 0.95,
+        temperature: 1,
         messages: [
           { role: "system", content: cryptoChanSystemPrompt },
           {

@@ -15,7 +15,7 @@ function enforceTweetLength(text: string, maxLength = 250): string {
 export async function generateTweet(openai: OpenAI): Promise<string> {
   const completion = await openai.chat.completions.create({
     model: config.openai.model,
-    temperature: 0.9,
+    temperature: 1,
     messages: [
       { role: "system", content: cryptoChanSystemPrompt },
       { role: "user", content: buildTweetPrompt() },
